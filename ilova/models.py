@@ -2,8 +2,13 @@ from django.db import models
 
 class Service(models.Model):
     name = models.CharField(max_length = 200)
-    definition = models.TextField(blank = True)
+    definition1 = models.TextField(blank = True)
+    definition2 = models.TextField(blank = True)
+    definition3 = models.TextField(blank = True)
+    definition4 = models.TextField(blank = True)
+    definition5 = models.TextField(blank = True)
     image = models.ImageField(blank = True)
+
 
 class Call(models.Model):
     qayerdan = models.CharField(max_length = 300)
@@ -17,6 +22,7 @@ class Portfolio(models.Model):
     image_desktop = models.ImageField
     image_phone_name = models.ImageField()
     description = models.CharField(max_length = 300)
+    category = models.CharField(max_length=300)
 
 class Massage(models.Model):
     name = models.CharField(max_length = 300)
